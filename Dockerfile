@@ -8,4 +8,5 @@ RUN apt-get install -y clang\
     git\
     build-essential\ 
     cmake\
-    catch2
+    catch2\
+    curl
