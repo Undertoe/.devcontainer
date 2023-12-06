@@ -9,4 +9,5 @@ RUN apt-get install -y clang\
     build-essential\ 
     cmake\
     catch2\
-    curl
+    curl\
+    clang-format
