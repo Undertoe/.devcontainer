@@ -1,0 +1,43 @@
+{
+    "name": "BaseUbuntu",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "cschlosser.doxdocgen",
+                "eamodio.gitlens",
+                "GitHub.copilot",
+                "jeff-hykin.better-cpp-syntax",
+                "josetr.cmake-language-support-vscode",
+                "lextudio.restructuredtext",
+                "Meezilla.json",
+                "mhutchie.git-graph",
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.makefile-tools",
+                "mutantdino.resourcemonitor",
+                "streetsidesoftware.code-spell-checker",
+                "twxs.cmake",
+                "xaver.clang-format",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    // Ref: https://docs.podman.io/en/v4.3/markdown/options/mount.html
+    // relabel=shared is the magic that made nonroot bind mounts work.
+    "workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind,bind-propagation=rshared",
+    // "runArgs": [
+    //     "-it",
+    //     "--userns=keep-id:uid=1000,gid=1000"
+    // ],
+    // "remoteUser": "1000:1000",
+    // "containerUser": "1000:1000",
+    "dockerFile": "Dockerfile",
+    "postCreateCommand": "mkdir -p .vscode/ && cp .devcontainer/c_cpp_properties.json .vscode/ && cp .devcontainer/settings.json .vscode/ && cp .devcontainer/.clang-tidy . && cp .devcontainer/.clang-format",
+    "postStartCommand": ""
+}
