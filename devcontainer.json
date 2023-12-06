@@ -31,6 +31,9 @@
     // Ref: https://docs.podman.io/en/v4.3/markdown/options/mount.html
     // relabel=shared is the magic that made nonroot bind mounts work.
     "workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind,bind-propagation=rshared",
+    "mounts": [
+        "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached"
+    ],
     // "runArgs": [
     //     "-it",
     //     "--userns=keep-id:uid=1000,gid=1000"
