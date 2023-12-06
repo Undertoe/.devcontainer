@@ -41,6 +41,6 @@
     // "remoteUser": "1000:1000",
     // "containerUser": "1000:1000",
     "dockerFile": "Dockerfile",
-    "postCreateCommand": "mkdir -p .vscode/ && cp .devcontainer/c_cpp_properties.json .vscode/ && cp .devcontainer/settings.json .vscode/ && cp .devcontainer/.clang-tidy . && cp .devcontainer/.clang-format",
+    "postCreateCommand": "mkdir -p .vscode/ && cp .devcontainer/c_cpp_properties.json .vscode/ && cp .devcontainer/settings.json .vscode/ && cp .devcontainer/.clang-tidy . && cp .devcontainer/.clang-format .",
     "postStartCommand": ""
 }
