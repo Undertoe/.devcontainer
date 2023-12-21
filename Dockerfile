@@ -10,6 +10,7 @@ RUN apt-get install -y \
     cmake\
     catch2\
     curl\
+    clang-tidy\
     clang-format
 
 RUN apt-get install -y clang-16
