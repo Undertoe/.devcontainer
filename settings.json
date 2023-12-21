@@ -67,4 +67,5 @@
     },
     "editor.formatOnSave": true,
     "editor.detectIndentation": false,
+    "editor.wordWrap": "on"
 }
