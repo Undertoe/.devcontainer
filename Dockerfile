@@ -14,3 +14,4 @@ RUN apt-get install -y \
     clang-format
 
 RUN apt-get install -y clang-16
+RUN apt-get install gcc-13 g++-13
